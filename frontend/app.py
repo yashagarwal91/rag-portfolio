@@ -191,30 +191,30 @@ with tab2:
 
 with tab3:
     st.markdown("### System Architecture")
-    st.markdown("""
-User Query
-    |
-    v
-Streamlit UI  (frontend/app.py)
-    |
-    | HTTP POST /query
-    v
-FastAPI App  (api/main.py)
-    |
-    +------------------+
-    v                  v
-Retriever          LLM (Groq)
-(pgvector)     llama-3.3-70b
-    |
-    +-- Basic similarity
-    +-- MMR
-    +-- Hybrid (BM25 + Vector -> Cross-encoder rerank)
-    |
-    v
-pgvector / PostgreSQL  (Docker)
-    |
-Embeddings: MiniLM-L6-v2
-""")
+    st.code("""
+    User Query
+        |
+        v
+    Streamlit UI  (frontend/app.py)
+        |
+        | HTTP POST /query
+        v
+    FastAPI App  (api/main.py)
+        |
+        +------------------+
+        v                  v
+    Retriever          LLM (Groq)
+    (pgvector)     llama-3.3-70b
+        |
+        +-- Basic similarity
+        +-- MMR
+        +-- Hybrid (BM25 + Vector -> Cross-encoder rerank)
+        |
+        v
+    pgvector / PostgreSQL  (Docker)
+        |
+    Embeddings: MiniLM-L6-v2
+    """, language=None)
 
     st.markdown("### Tech Stack")
     col1, col2 = st.columns(2)
