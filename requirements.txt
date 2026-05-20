@@ -1,0 +1,52 @@
+# Document Loading
+pypdf
+pymupdf==1.23.8
+unstructured
+
+# LangChain
+langchain
+langchain-community
+langchain-core
+langchain-groq
+langchain-ollama
+langchain-openai
+langchain-postgres
+langchain-text-splitters
+langchain-experimental
+
+# Vector DB
+pgvector
+psycopg2-binary
+psycopg
+psycopg-binary
+sqlalchemy
+
+# Embeddings & Reranking
+sentence-transformers
+torch
+
+# Hybrid Search
+rank-bm25
+
+# API
+fastapi
+uvicorn
+pydantic
+python-dotenv
+httpx
+
+# Evaluation
+ragas
+datasets
+
+# Frontend
+streamlit
+
+# LLM Providers
+groq
+openai
+
+# Utilities
+numpy
+pandas
+tqdm
