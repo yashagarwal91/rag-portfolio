@@ -3,7 +3,24 @@
 A production-grade Retrieval-Augmented Generation (RAG) system built with LangChain, pgvector, FastAPI, and Streamlit. Includes hybrid search, cross-encoder reranking, and RAGAS-based evaluation across multiple retrieval strategies.
 
 ---
+## Demo
 
+### QA Interface
+![QA Interface](assets/screenshot_1.png)
+
+### Tech Stack
+![Tech Stack](assets/screenshot_2.png)
+
+### System Architecture
+![Architecture](assets/screenshot_3.png)
+
+### RAGAS Evaluation
+![RAGAS Results](assets/screenshot_4.png)
+
+### Retrieved Sources
+![Retrieved Sources](assets/screenshot_5.png)
+
+---
 ## Live Demo
 > Run locally following the setup guide below.
 > Frontend: `http://localhost:8501`
