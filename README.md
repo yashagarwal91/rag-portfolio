@@ -258,7 +258,5 @@ Swagger UI for interactive API testing.
 ---
 
 ## Author
-**Yash** — transitioning from support engineering to GenAI/LLM engineering.
+**Yash** — GenAI/LLM Engineer
 Built as a portfolio project to demonstrate production RAG system design.
-
-Connect on LinkedIn: [your-linkedin-url]
