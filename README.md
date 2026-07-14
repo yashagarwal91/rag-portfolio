@@ -29,34 +29,31 @@ A production-grade Retrieval-Augmented Generation (RAG) system built with LangCh
 ---
 
 ## System Architecture
+
+```
 User Query
-│
-▼
-┌─────────────────┐
-│   Streamlit UI  │  ← frontend/app.py
-└────────┬────────┘
-│ HTTP POST /query
-▼
-┌─────────────────┐
-│   FastAPI App   │  ← api/main.py
-└────────┬────────┘
-│
-┌─────┴──────────────┐
-▼                    ▼
-Retriever            LLM (Groq)
-(pgvector)       llama-3.3-70b
-│
-├── Basic Similarity
-├── MMR (Maximal Marginal Relevance)
-└── Hybrid (BM25 + Vector + Reranker)
-│
-▼
-┌─────────────────┐
-│   pgvector DB   │
-│  (PostgreSQL)   │
-└─────────────────┘
-│
+    |
+    v
+Streamlit UI  (frontend/app.py)
+    |
+    | HTTP POST /query
+    v
+FastAPI App  (api/main.py)
+    |
+    +------------------+
+    v                  v
+Retriever          LLM (Groq)
+(pgvector)     llama-3.3-70b
+    |
+    +-- Basic similarity
+    +-- MMR
+    +-- Hybrid (BM25 + Vector -> Cross-encoder rerank)
+    |
+    v
+pgvector / PostgreSQL  (Docker)
+    |
 Embeddings: MiniLM-L6-v2 (HuggingFace)
+```
 ---
 
 ## Features
