@@ -127,6 +127,8 @@ Evaluated on a 10-question synthetic testset generated from the document corpus.
 ---
 
 ## Project Structure
+
+```
 rag-portfolio/
 ├── data/
 │   └── raw/              ← place your PDFs here
@@ -153,6 +155,7 @@ rag-portfolio/
 ├── docker-compose.yml
 ├── requirements.txt
 └── README.md
+```
 ---
 
 ## Setup Guide
